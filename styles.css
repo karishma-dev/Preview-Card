@@ -9,16 +9,14 @@
 
 body {
   background-color: #f2f2f2;
-  font-size: 15px;
   word-spacing: 8px;
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 200px;
-  margin-bottom: 100px;
+  min-height: 95vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .card-container {
@@ -32,20 +30,21 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: auto;
   max-width: 80vw;
 }
 
 .card-item {
   padding: 55px;
-  height: 540px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 img {
   margin-bottom: 35px;
 }
 
-h1 {
+h2 {
   color: #f2f2f2;
   margin-bottom: 35px;
   text-transform: uppercase;
@@ -54,23 +53,18 @@ h1 {
 
 .description {
   color: rgba(255, 255, 255, 0.75);
-  font-size: 15px;
   width: 11em;
   margin-bottom: 70px;
   font-family: 'Lexend Deca', sans-serif;
 }
 
-.button {
+.learn-more {
   background-color: #f2f2f2;
   border: 1px solid white;
   border-radius: 20px;
   padding: 12px 25px;
-  font-size: 15px;
   font-family: 'Lexend Deca', sans-serif;
-}
-
-.button:hover {
-  cursor: pointer;
+  text-decoration: none;
 }
 
 #sedan {
@@ -79,11 +73,11 @@ h1 {
   border-bottom-left-radius: 10px;
 }
 
-#sedan .button {
+#sedan .learn-more {
   color: #e38826;
 }
 
-#sedan .button:hover {
+#sedan .learn-more:hover {
   background-color: #e38826;
   color: white;
 }
@@ -92,11 +86,11 @@ h1 {
   background-color: #006970;
 }
 
-#suv .button {
+#suv .learn-more {
   color: #006970;
 }
 
-#suv .button:hover {
+#suv .learn-more:hover {
   background-color: #006970;
   color: white;
 }
@@ -107,11 +101,11 @@ h1 {
   border-bottom-right-radius: 10px;
 }
 
-#luxury .button {
+#luxury .learn-more {
   color: #004241;
 }
 
-#luxury .button:hover {
+#luxury .learn-more:hover {
   background-color: #004241;
   color: white;
 }
@@ -136,14 +130,12 @@ h1 {
         flex-wrap: wrap;
   }
   .card-item {
-    height: 410px !important;
     padding: 40px !important;
   }
-  img, h1 {
+  img, h2 {
     margin-bottom: 20px !important;
   }
   .description {
-    font-size: 1em;
     margin-bottom: 40px !important;
   }
 }
@@ -151,6 +143,7 @@ h1 {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 10px;
 }
 
 .attribution a {

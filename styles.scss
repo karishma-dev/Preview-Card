@@ -15,13 +15,12 @@ $luxury-color: hsl(179, 100%, 13%);
 }
 body{
     background-color: hsl(0, 0%, 95%);
-    font-size: 15px;
     word-spacing: 8px;
 }
 main{
-    display: flex;
-    margin-top: 200px;
-    margin-bottom: 100px;
+    min-height: 95vh;
+    display: grid;
+    place-items: center;
 }
 
 // Card Container
@@ -29,19 +28,18 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin: auto;
     max-width: 80vw;
 }
 
 // Card Item
 .card-item{
     padding: 55px;
-    height: 540px;
+    height: fit-content;
 }
 img{
     margin-bottom: 35px;
 }
-h1{
+h2{
     color: hsl(0, 0%, 95%);
     margin-bottom: 35px;
     text-transform: uppercase;
@@ -49,23 +47,18 @@ h1{
 }
 .description{
     color: hsla(0, 0%, 100%, 0.75);
-    font-size: 15px;
     width: 11em;
     margin-bottom: 70px;
     font-family: 'Lexend Deca', sans-serif;
 }
-.button{
+.learn-more{
     background-color: hsl(0, 0%, 95%);
     border: 1px solid white;
     border-radius: 20px;
     padding:  12px 25px;
-    font-size: 15px;
     font-family: 'Lexend Deca', sans-serif;
+    text-decoration: none;
 }
-.button:hover{
-    cursor: pointer;
-}
-
 
 // Car Cards
 // Sedan
@@ -75,10 +68,10 @@ h1{
     border-bottom-left-radius: 10px;
 }
 #sedan{
-    .button{
+    .learn-more{
         color: $sedan-color;
     }
-    .button:hover{
+    .learn-more:hover{
         background-color: $sedan-color;
         color: white;
     }
@@ -89,10 +82,10 @@ h1{
     background-color: $suv-color;
 }
 #suv{
-    .button{
+    .learn-more{
         color: $suv-color;
     }
-    .button:hover{
+    .learn-more:hover{
         background-color: $suv-color;
         color: white;
     }
@@ -105,16 +98,15 @@ h1{
     border-bottom-right-radius: 10px;
 }
 #luxury{
-    .button{
+    .learn-more{
         color: $luxury-color;
     }
-    .button:hover{
+    .learn-more:hover{
         background-color: $luxury-color;
         color: white;
     }   
 }
 
-// Why didn't button:hover{color:white;} work?
 // Media Queries
 @media (max-width: 650px) {
     #sedan{
@@ -134,18 +126,22 @@ h1{
         flex-wrap: wrap;
     }
     .card-item{
-        height:  410px !important;
         padding: 40px !important;
     }
-    img,h1{
+    img,h2{
         margin-bottom: 20px !important;
     }
     .description{
-        font-size: 1em;
         margin-bottom: 40px !important;
     }
 }
 
 // Attribution
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding: 10px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
