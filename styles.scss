@@ -1,0 +1,151 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+// Variables for color
+$sedan-color: hsl(31, 77%, 52%);
+$suv-color: hsl(184, 100%, 22%);
+$luxury-color: hsl(179, 100%, 13%);
+
+// Root selector, body, main
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 95%);
+    font-size: 15px;
+    word-spacing: 8px;
+}
+main{
+    display: flex;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+// Card Container
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    max-width: 80vw;
+}
+
+// Card Item
+.card-item{
+    padding: 55px;
+    height: 540px;
+}
+img{
+    margin-bottom: 35px;
+}
+h1{
+    color: hsl(0, 0%, 95%);
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+.description{
+    color: hsla(0, 0%, 100%, 0.75);
+    font-size: 15px;
+    width: 11em;
+    margin-bottom: 70px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.button{
+    background-color: hsl(0, 0%, 95%);
+    border: 1px solid white;
+    border-radius: 20px;
+    padding:  12px 25px;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+
+// Car Cards
+// Sedan
+#sedan{
+    background-color: $sedan-color;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#sedan{
+    .button{
+        color: $sedan-color;
+    }
+    .button:hover{
+        background-color: $sedan-color;
+        color: white;
+    }
+}
+
+// Suv
+#suv{
+    background-color: $suv-color;
+}
+#suv{
+    .button{
+        color: $suv-color;
+    }
+    .button:hover{
+        background-color: $suv-color;
+        color: white;
+    }
+}
+
+// Luxury
+#luxury{
+    background-color: $luxury-color;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#luxury{
+    .button{
+        color: $luxury-color;
+    }
+    .button:hover{
+        background-color: $luxury-color;
+        color: white;
+    }   
+}
+
+// Why didn't button:hover{color:white;} work?
+// Media Queries
+@media (max-width: 650px) {
+    #sedan{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0px !important;
+    }
+    #luxury{
+        border-top-right-radius: 0px !important;
+        border-bottom-left-radius: 10px;
+    }
+}
+@media (max-width: 1000px) {
+    main{
+        margin-top: 50px;
+    }
+    .card-container{
+        flex-wrap: wrap;
+    }
+    .card-item{
+        height:  410px !important;
+        padding: 40px !important;
+    }
+    img,h1{
+        margin-bottom: 20px !important;
+    }
+    .description{
+        font-size: 1em;
+        margin-bottom: 40px !important;
+    }
+}
+
+// Attribution
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

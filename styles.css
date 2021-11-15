@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-size: 15px;
+  word-spacing: 8px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto;
+  max-width: 80vw;
+}
+
+.card-item {
+  padding: 55px;
+  height: 540px;
+}
+
+img {
+  margin-bottom: 35px;
+}
+
+h1 {
+  color: #f2f2f2;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  width: 11em;
+  margin-bottom: 70px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.button {
+  background-color: #f2f2f2;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 12px 25px;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+#sedan {
+  background-color: #e38826;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#sedan .button {
+  color: #e38826;
+}
+
+#sedan .button:hover {
+  background-color: #e38826;
+  color: white;
+}
+
+#suv {
+  background-color: #006970;
+}
+
+#suv .button {
+  color: #006970;
+}
+
+#suv .button:hover {
+  background-color: #006970;
+  color: white;
+}
+
+#luxury {
+  background-color: #004241;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#luxury .button {
+  color: #004241;
+}
+
+#luxury .button:hover {
+  background-color: #004241;
+  color: white;
+}
+
+@media (max-width: 650px) {
+  #sedan {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px !important;
+  }
+  #luxury {
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin-top: 50px;
+  }
+  .card-container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card-item {
+    height: 410px !important;
+    padding: 40px !important;
+  }
+  img, h1 {
+    margin-bottom: 20px !important;
+  }
+  .description {
+    font-size: 1em;
+    margin-bottom: 40px !important;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=styles.css.map */
